@@ -13,10 +13,30 @@ $(document).ready(function(){
       $(".li-p").hide();
 
   }) 
+$("#bgvid").prop('muted', true); 
 
 
+$("#contentbar").on('mouseover',function(){
+$("#bgvid").prop('muted', false); 
 
- setInterval(function(){
+})
+$("#contentbar").on('mouseleave',function(){
+$("#bgvid").prop('muted', true); 
+})
+$("#ul-be").hide()
+$("#bench").on('mouseover',function(){
+
+ $("#ul-be").show()
+
+})
+
+ $("#ul-be").on('mouseleave',function(){
+
+$("#ul-be").hide()
+  })
+
+
+ /*setInterval(function(){
    
    $( ".toggle" ).animate({
     opacity: 1,
@@ -40,13 +60,14 @@ $(document).ready(function(){
   });
 
 
-
+*/
 
  /* $( "#toggle" ).toggle({ effect: "scale", direction: "vertical" });
-*/
+
 
 
  },1000);
+*/
 
 })
 
