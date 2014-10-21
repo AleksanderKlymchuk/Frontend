@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	 $(".li-p").hide();
 
-  $("li ").mouseover(function()
+  $("li").mouseover(function()
   {
      
       $(".li-p").show();
@@ -35,7 +35,8 @@ $("#bench").on('mouseover',function(){
 $("#ul-be").hide()
   })
 
-
+hello=10;
+alert(hello)
  /*setInterval(function(){
    
    $( ".toggle" ).animate({
