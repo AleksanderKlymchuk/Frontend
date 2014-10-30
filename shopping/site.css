@@ -1,0 +1,48 @@
+input
+{
+
+margin-left: 10em;
+
+}
+
+.List input:first-child
+{
+  border-color: red;
+   margin-top: 3em;
+
+}
+.Item input:first-child
+{
+  border-color: blue;
+  margin-top: 1em;
+  margin-left: 15em;
+}
+.Item input:last-child
+{
+  border-color: black;
+  width: 3em;
+
+}
+input[type=button]
+{
+ 
+  
+
+}
+a
+{   text-decoration: none;
+	color: black;
+	font-weight: bold;
+	margin-left: 0.5em;
+    height: 1em;
+	width: 1em;
+}
+.Item span
+{
+  
+  margin-left: 12em;
+  margin-top: 3em;
+  border-color: black;
+
+}
+
