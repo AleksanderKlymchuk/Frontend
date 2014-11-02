@@ -24,54 +24,56 @@ function NewInputs(el,nm)
          var amount=document.getElementsByClassName("parent")[0].value;
          if(amount>val)
          {
-            val=amount;
-            var span=document.createElement("span");
+        val=amount;
+        var ul=document.createElement("ul");
+        var li=document.createElement("li");
 		    var inputText=document.createElement("input");
 		    var addItem=document.createElement("a");
 		    var remItem=document.createElement("a");
 		    var textAdd=document.createTextNode("+");
 		    var textRem=document.createTextNode("-");
 		    inputText.setAttribute("type","text");
+
 		    addItem.appendChild(textAdd);
 		    addItem.setAttribute("href","#");
 		    remItem.appendChild(textRem);
 		    remItem.setAttribute("href","#");
-		    var lineBreake=document.createElement("br");
-		    span.setAttribute("class",nm);
+		    
+		    ul.setAttribute("class",nm);
 		    addItem.onclick=function()
 		    {
 		      val=0;
               	 childVal=this.value;
-                 NewInputs(span,"Item");
+                 NewInputs(li,"Item");
 		    }
 		     remItem.onclick=function()
 		     {
-               var last=this.parentNode;
-              var rem=this.parentNode.getElementsByTagName("span")
+              var last=this.parentNode.parentNode;
+             var rem=this.parentNode.getElementsByTagName("ul")
              if (rem.length!=0)
              {
              var last=parseInt(rem.length-1);
              rem[last].parentNode.removeChild(rem[last]);
              }
-              var br=this.parentNode.getElementsByTagName("br")
-             if (br.length!=0)
-             {
-             var last=parseInt(br.length-1);
-             br[last].parentNode.removeChild(br[last]);
-             }
+            
+              
 		     }
             inputText.type="text";
 		    inputText.setAttribute("Placeholder","Enter "+nm+" Name");
-            span.appendChild(inputText);
-            span.appendChild(addItem);
-            span.appendChild(remItem);
-            el.appendChild(lineBreake);
-            el.appendChild(span);
+            li.appendChild(inputText);
+           // ul.appendChild(inputText);
+            li.appendChild(addItem);
+            li.appendChild(remItem);
+            ul.appendChild(li);
+           
+            el.appendChild(ul);
         }
-        if (amount<val && amount!="-1")
+        if (amount<val)
           {
+            val=amount;
             var ChildLast=el.lastChild;
             el.removeChild(ChildLast);
-            val=amount;
+            
+           
           }
 }

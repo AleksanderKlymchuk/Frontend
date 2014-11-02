@@ -23,12 +23,7 @@ margin-left: 10em;
   width: 3em;
 
 }
-input[type=button]
-{
- 
-  
 
-}
 a
 {   text-decoration: none;
 	color: black;
@@ -45,4 +40,9 @@ a
   border-color: black;
 
 }
+ul
+{
 
+ list-style: none;
+
+}
