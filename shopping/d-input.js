@@ -28,17 +28,14 @@ function NewInputs(el,nm)
         var ul=document.createElement("ul");
         var li=document.createElement("li");
 		    var inputText=document.createElement("input");
-		    var addItem=document.createElement("a");
-		    var remItem=document.createElement("a");
-		    var textAdd=document.createTextNode("+");
-		    var textRem=document.createTextNode("-");
+		    var addItem=document.createElement("input");
+		    var remItem=document.createElement("input");
+		     addItem.setAttribute("type","button");
+         addItem.setAttribute("value","+");
+         remItem.setAttribute("type","button");
+         remItem.setAttribute("value","-");
 		    inputText.setAttribute("type","text");
-
-		    addItem.appendChild(textAdd);
-		    addItem.setAttribute("href","#");
-		    remItem.appendChild(textRem);
-		    remItem.setAttribute("href","#");
-		    
+         
 		    ul.setAttribute("class",nm);
 		    addItem.onclick=function()
 		    {

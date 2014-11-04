@@ -4,6 +4,19 @@ input
 margin-left: 10em;
 
 }
+.List input
+{
+
+margin-left: 1em;
+
+}
+.Item input
+{
+
+margin-left: 1em;
+
+}
+
 
 .List input:first-child
 {
@@ -17,21 +30,8 @@ margin-left: 10em;
   margin-top: 1em;
   margin-left: 15em;
 }
-.Item input:last-child
-{
-  border-color: black;
-  width: 3em;
 
-}
 
-a
-{   text-decoration: none;
-	color: black;
-	font-weight: bold;
-	margin-left: 0.5em;
-    height: 1em;
-	width: 1em;
-}
 .Item span
 {
   
