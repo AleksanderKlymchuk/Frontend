@@ -1,7 +1,25 @@
+#container1
+{
+ margin-left: 10em;
+ float: left;
+
+}
+#container2
+{
+  float: left;
+  margin-left: 1em;
+
+}
+#sub-but
+{
+ margin-left :10em;
+ float: left;
+
+}
 input
 {
 
-margin-left: 10em;
+margin-left: 1em;
 
 }
 .List input

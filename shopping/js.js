@@ -1,14 +1,13 @@
 window.onload=function(){
+
    var div=document.getElementById("frame");
-   var input=cl("parent",div);
-   console.log(localStorage.getItem("jList"));
+   NewInputs(div,"List");
+   var object=localStorage.getItem("jList")
+   console.log(object)
+  
            }
 
-window.onunload=function()
-{
 
-  //localStorage.clear();
-}
  function NewObj(){
     var listItem= new Object();
     var list=document.getElementsByClassName("List");
@@ -61,8 +60,10 @@ window.onunload=function()
                    }
            };
           } 
-              localStorage.setItem("jList",listItem);   
-              console.log(listItem);
+              localStorage.clear();
+              var val=listItem.list;
+              localStorage.setItem("jList",val);   
+              console.log(val);
     }
    }
 

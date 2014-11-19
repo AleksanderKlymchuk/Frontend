@@ -1,3 +1,51 @@
+
+
+function NewInputs(el,nm)
+{
+        var ul=document.createElement("ul");
+        var li=document.createElement("li");
+        var inputText=document.createElement("input");
+        var addItem=document.createElement("input");
+        var remItem=document.createElement("input");
+         addItem.setAttribute("type","button");
+         addItem.setAttribute("value","+");
+         remItem.setAttribute("type","button");
+         remItem.setAttribute("value","-");
+         inputText.setAttribute("type","text");
+         
+        ul.setAttribute("class",nm);
+        addItem.onclick=function()
+        {
+          val=0;
+                 childVal=this.value;
+                 NewInputs(li,"Item");
+        }
+         remItem.onclick=function()
+         {
+              var last=this.parentNode.parentNode;
+             var rem=this.parentNode.getElementsByTagName("ul")
+             if (rem.length!=0)
+             {
+             var last=parseInt(rem.length-1);
+             rem[last].parentNode.removeChild(rem[last]);
+             }
+            
+              
+         }
+            inputText.type="text";
+            inputText.setAttribute("Placeholder","Enter "+nm+" Name");
+            li.appendChild(inputText);
+           // ul.appendChild(inputText);
+            li.appendChild(addItem);
+            li.appendChild(remItem);
+            ul.appendChild(li);
+           
+            el.appendChild(ul);
+ 
+       
+}
+
+/*
 function cl(clname,element)
 {
   var inp=document.createElement("input");
@@ -27,24 +75,24 @@ function NewInputs(el,nm)
         val=amount;
         var ul=document.createElement("ul");
         var li=document.createElement("li");
-		    var inputText=document.createElement("input");
-		    var addItem=document.createElement("input");
-		    var remItem=document.createElement("input");
-		     addItem.setAttribute("type","button");
+        var inputText=document.createElement("input");
+        var addItem=document.createElement("input");
+        var remItem=document.createElement("input");
+         addItem.setAttribute("type","button");
          addItem.setAttribute("value","+");
          remItem.setAttribute("type","button");
          remItem.setAttribute("value","-");
-		    inputText.setAttribute("type","text");
+        inputText.setAttribute("type","text");
          
-		    ul.setAttribute("class",nm);
-		    addItem.onclick=function()
-		    {
-		      val=0;
-              	 childVal=this.value;
+        ul.setAttribute("class",nm);
+        addItem.onclick=function()
+        {
+          val=0;
+                 childVal=this.value;
                  NewInputs(li,"Item");
-		    }
-		     remItem.onclick=function()
-		     {
+        }
+         remItem.onclick=function()
+         {
               var last=this.parentNode.parentNode;
              var rem=this.parentNode.getElementsByTagName("ul")
              if (rem.length!=0)
@@ -54,9 +102,9 @@ function NewInputs(el,nm)
              }
             
               
-		     }
+         }
             inputText.type="text";
-		    inputText.setAttribute("Placeholder","Enter "+nm+" Name");
+        inputText.setAttribute("Placeholder","Enter "+nm+" Name");
             li.appendChild(inputText);
            // ul.appendChild(inputText);
             li.appendChild(addItem);
@@ -74,3 +122,4 @@ function NewInputs(el,nm)
            
           }
 }
+*/
